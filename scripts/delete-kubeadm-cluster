@@ -12,3 +12,7 @@ done
 for i in `vagrant global-status | awk '/kubeadm/ {print $1}'`; do
     vagrant destroy -f $i
 done 
+
+for box in `ls ${VAGRANTHOME} | grep kubeadm`; do
+    rm -rf ${VAGRANTHOME}/${box}
+done
