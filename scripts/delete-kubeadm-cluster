@@ -1,0 +1,14 @@
+#!/bin/bash -vx
+
+VAGRANTHOME="/home/matty/vagrant"
+
+for box in `ls ${VAGRANTHOME} | grep kubeadm`; do
+    echo "Deleting vagrant box ${VAGRANTHOME}/${box}"
+    cd ${VAGRANTHOME}/${box} && vagrant halt
+    cd ${VAGRANTHOME}
+    rm -rf ${VAGRANTHOME}/${box}
+done
+
+for i in `vagrant global-status | awk '/kubeadm/ {print $1}'`; do
+    vagrant destroy -f $i
+done 
