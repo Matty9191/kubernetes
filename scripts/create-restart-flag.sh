@@ -3,7 +3,7 @@
 # Program: create-restart-flag.sh
 # Purpose: create a restart required flag if a new kernel or systemd
 #          package was installed. Kured can use this flag to schedule
-#          staged reboots of your hosts:
+#          staged reboots of your Kubernetes hosts:
 #          https://github.com/weaveworks/kured
 # Current Version: 1.0
 # Last Updated: 03-01-2018
