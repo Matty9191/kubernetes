@@ -23,7 +23,7 @@
 DEBUG=0
 REBOOT_REQUIRED=0
 RESTART_CHECK_COMMAND=$(command -v needs-restarting)
-RESTART_REQUIRED_FLAG="/run/restart-required"
+RESTART_REQUIRED_FLAG="/run/reboot-required"
 
 current_kernel=$(uname -r)
 newest_kernel=$(rpm -q --last kernel | awk 'NR==1{print $1}')
