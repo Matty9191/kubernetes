@@ -35,7 +35,7 @@ debug() {
 }
 
 # Compare the latest kernel installed w/ the kernel we are running.
-if [[ "${current_kernel}}" != "${newest_kernel}" ]]; then
+if [[ "${current_kernel}" != "${newest_kernel}" ]]; then
      debug "There is a new kernel that will be activated when the system restarts"
      debug "Current kernel: ${current_kernel}  New kernel: ${newest_kernel}"
      REBOOT_REQUIRED=1
