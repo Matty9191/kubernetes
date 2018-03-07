@@ -53,4 +53,4 @@ if [ ${REBOOT_REQUIRED} -eq 1 ]; then
 fi
 
 # Let the world know if we found something that requires a reboot
-exit $REBOOT_REQUIRED
+exit 0
