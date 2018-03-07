@@ -52,5 +52,4 @@ if [ ${REBOOT_REQUIRED} -eq 1 ]; then
      touch ${RESTART_REQUIRED_FLAG}
 fi
 
-# Let the world know if we found something that requires a reboot
 exit 0
